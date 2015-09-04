@@ -114,3 +114,8 @@ if(isset($_GET['c']))
         $productController->delete($_GET['id']);
     }
 }
+else
+{
+    $productController = new ProductController();
+    $productController->index();
+}

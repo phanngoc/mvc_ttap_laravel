@@ -17,9 +17,11 @@
 			<div class="col-md-9">
 
 				<div id="edit-product">
-					<div class="alert alert-success">
-					  <strong></strong>
-					</div>
+					<?php if(isset($_GET['m']) && $_GET['m'] == 'ok') :?>
+						<div class="alert alert-success">
+						  <strong>Update successfully</strong>
+						</div>
+					<?php endif;?>
 					<a href="<?php echo BASEURL.'/?c=product/index';?>" class="btn btn-warning">List product</a>
 					<form action="<?php echo BASEURL.'/?c=product/edit&id='.$product->id;?>" method="POST">
 						<h3>Edit product</h3>

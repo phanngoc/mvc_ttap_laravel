@@ -46,7 +46,7 @@ class ProductController extends Controller {
     	$view = new View("product/edit.php");
     	$modelProduct = new Product();
     	$modelProduct->updateProduct($id,$_POST['name'],$_POST['price'],$_POST['description']);
-    	header('Location: '.BASEURL.'?c=product/edit&id='.$id);
+    	header('Location: '.BASEURL.'?c=product/edit&id='.$id.'&m=ok');
     }
 
     public function delete($id)
